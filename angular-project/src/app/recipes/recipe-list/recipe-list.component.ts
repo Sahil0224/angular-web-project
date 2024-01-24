@@ -8,7 +8,9 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit{
   recipes: Recipe[] = [
+    new Recipe('A Test Recipe', 'This is simply a test', 'https://www.primaverakitchen.com/wp-content/uploads/2018/05/Whole30-Bunless-Turkey-Burger-Recipe-Primavera-Kitchen-1.jpg'),
     new Recipe('A Test Recipe', 'This is simply a test', 'https://www.primaverakitchen.com/wp-content/uploads/2018/05/Whole30-Bunless-Turkey-Burger-Recipe-Primavera-Kitchen-1.jpg')
+
   ];
   
   constructor() {}
