@@ -4,10 +4,16 @@ import { Recipe } from './recipe.model';
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrl: './recipes.component.css'
+  styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
+  selectedRecipe: Recipe | undefined;
+  isRecipeSelected: boolean = false;
 
-  selectedRecipe: Recipe;
+  constructor() {}
 
+  onRecipeSelected(recipe: Recipe) {
+    this.selectedRecipe = recipe;
+    this.isRecipeSelected = true;
+  }
 }
