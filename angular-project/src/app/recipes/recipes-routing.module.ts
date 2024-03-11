@@ -8,7 +8,7 @@ import { RecipesResolverService } from "./recipes-resolver.service";
 import { RecipesComponent } from "./recipes.component";
 
 const routes: Routes = [
-    {path: 'recipes', component: RecipesComponent, children: [
+    {path: '', component: RecipesComponent, children: [
         {path: '', component: RecipeStartComponent, canActivate: [AuthGaurd]},
         {path: 'new', component: RecipeEditComponent},
         {path: ':id', component: RecipeDetailComponent, resolve: [RecipesResolverService]},
